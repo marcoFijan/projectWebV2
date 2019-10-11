@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="resources/images/logo.png" alt="logo"></a>
+      <!-- NAVIGATION BAR -->
+      <nav>
+        <!-- HAMBURGER MENU -->
+        <label for="hamburger">&#9776;</label>
+        <input type="checkbox" id="hamburger"/>
+        <!-- MENU ITEMS -->
+        <ul>
+          <li><a href="indexSignIn.html">Home</a></li>
+          <li><a href="bezochtLanden.html">Bezochte landen</a></li>
+          <li><a href="favorite.html">Mijn favorieten</a></li>
+          <li><a href="explain.html">Uitleg</a></li>
+          <li><a href="index.html">Uitloggen</a></li>
+        </ul>
+      </nav>
+  </header>
+  <main>
+    <div class="image griekenlandImage"></div>
+    <h4>Lijstie aanpassen: Rhodos</h4>
+    <section class="makeList">
+      <h1>Mijn lijstie:</h1>
+      <ul>
+        <li>
+          <h2>Rhodos stad: Akropolis</h2>
+          <div class="deleteButton">verwijder</div>
+        </li>
+        <li>
+          <h2>Rhodos stad: Paleis van de Grootmeesters</h2>
+          <div class="deleteButton">verwijder</div>
+        </li>
+        <li>
+          <h2>Rhodos stad: Archeologisch Museum</h2>
+          <div class="deleteButton">verwijder</div>
+        </li>
+        <li>
+          <h2>Rhodos stad: Vestinggracht</h2>
+          <div class="deleteButton">verwijder</div>
+        </li>
+        <li>
+          <h2>Rhodos stad: Mandréki haven</h2>
+          <div class="deleteButton">verwijder</div>
+        </li>
+        <li>
+          <h2>Rhodos stad: Ridderstraat</h2>
+          <div class="deleteButton">verwijder</div>
+        </li>
+        <li>
+          <h2>Rhodos stad: Marinepoort</h2>
+          <div class="deleteButton">verwijder</div>
+        </li>
+        <li>
+          <h2>Rhodos stad: Eli Beach</h2>
+          <div class="deleteButton">verwijder</div>
+        </li>
+      </ul>
+    </section>
+    <form id ="addItemBox" class="addItemBox">
+      <input class="addItemBar" list="addItemDataList" type="text" placeholder="Voeg een trekpleister toe. Bijvoorbeeld: 'Eiffeltoren' ">
+      <div id="addItemButton" class="addItemButton">+</div>
+      <datalist id="addItemDataList">
+        <option value="Rhodos stad: Archeologisch Museum">
+        <option value="Rhodos stad: Akropolis">
+        <option value="Rhodos stad: Paleis van de Grootmeesters">
+        <option value="Rhodos stad: Vestinggracht">
+        <option value="Rhodos stad: Mandréki haven">
+        <option value="Rhodos stad: Ridderstraat">
+        <option value="Rhodos stad: Marinepoort">
+        <option value="Rhodos stad: Eli Beach">
+        <option value="Gennadi Zuid: Rotsstranden">
+        <option value="Gennadi Oost: Zandstranden">
+        <option value="Prasonissi strand">
+        <option value="Prasonissi: Kitesurfen">
+        <option value="Prasonissi: Windsurfen">
+        <option value="Rhodos binnenland: Watervallenpad">
+        <option value="Rhodos binnenland: Hertenbos">
+        <option value="Lindos stad">
+        <option value="de Vlindervallei">
+        <option value="Eiland: Halki">
+        <option value="Eiland: Symi">
+        <option value="Eiland: Tilos">
+        <option value="Eiland: Kastellorizo">
+        <option value="Strand: Tsambika">
+        <option value="Strand: St Paul's">
+        <option value="Strand: Bay">
+        <option value="Strand: Agios Pavlos">
+      </datalist>
+    </form>
+    <div class="button"><a href="indexSignIn.html">Opslaan</a></div>
+    <div class="button cancelButton"><a href="indexSignIn.html">Annuleren</a></div>
+  </main>
+  <footer>
+    <p>Copyright: Marco Fijan</p>
+  </footer>
+  <script src="script/script.js"></script>
+</body>
+</html>

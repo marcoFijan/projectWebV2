@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="resources/images/logo.png" alt="logo"></a>
+      <!-- NAVIGATION BAR -->
+      <nav>
+        <!-- HAMBURGER MENU -->
+        <label for="hamburger">&#9776;</label>
+        <input type="checkbox" id="hamburger"/>
+        <!-- MENU ITEMS -->
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Mijn lijsties</a></li>
+          <li><a href="#visitedLand">Bezochte landen</a></li>
+          <li><a href="inloggen.html">Inloggen</a></li>
+        </ul>
+      </nav>
+  </header>
+  <main>
+    <article class="info infoMobile">
+      <h1>Mijn Lijstie...? Wat is dit allemaal?</h1>
+      <p>Mijn Lijstie is een reisgids. Met deze reisgids kun je verschillende 'lijsties' maken met verschillende trekpleisters die jij wilt bezoeken in verschillende steden.</p>
+      <p>Klik op de knop hieronder en maak je lijstie!</p>
+      <div class="button"><a href="inloggen.html">Maak nu je lijstie!</a></div>
+    </article>
+
+    <h1>Mijn Lijsties... Ow nee je hebt er nog geen!</h1>
+    <img src="resources/images/emptyState.svg" alt="emptyState afbeelding" class="emptyState">
+    <div class="button"><a href="inloggen.html">Nieuw lijstie</a></div>
+    <div class="seperator pc"></div>
+
+    <article class="info">
+      <h1>Mijn Lijstie...? Wat is dit allemaal?</h1>
+      <p>Mijn Lijstie is een reisgids. Met deze reisgids kun je verschillende 'lijsties' maken met verschillende trekpleisters die jij wilt bezoeken in verschillende steden.</p>
+      <p>Je eigen lijstie maken doe je in de volgende stappen:</p>
+      <ol>
+        <li>Klik op nieuw lijstie maken</li>
+        <li>Zoek op Mijn Lijstie een leuke stad op waar je graag naar toe wilt</li>
+        <li>Vul jou favoriete plekjes en trekpleisters in</li>
+        <li>Sla je lijstie op. (Dit kun je later altijd nog aanpassen)</li>
+        <li>En dat is het! Je lijstie word automatisch geactiveerd op je mobiel wanneer je in die locatie of stad bent!</li>
+      </ol>
+      <p>Word je lijstie niet geactiveerd? Of word het verkeerde lijstie geactiveerd? Dan kun je altijd nog handmatig je goede lijstie activeren door op je lijstie te klikken</p>
+      <div class="button"><a href="inloggen.html">Maak nu je lijstie!</a></div>
+    </article>
+    <div class="seperator"></div>
+    <h1 id="visitedLand">Mijn bezochte landen... Ow nee. Je hebt nog geen landje bezocht!</h1>
+    <img src="resources/images/emptyState.svg" alt="emptyState afbeelding" class="emptyState">
+  </main>
+  <footer>
+    <p>Copyright: Marco Fijan</p>
+  </footer>
+</body>
+</html>

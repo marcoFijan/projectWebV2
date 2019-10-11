@@ -1,0 +1,134 @@
+body, main, h1, h2{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+/* //////////////////////////////////////////////////HEADER/////////////////////////////////////////////////// */
+header{
+  width: 100%;
+  height: 10vh;
+  background: #4DA5C2;
+  color: white;
+  position: fixed;
+  z-index: 2;
+}
+
+nav{
+  padding: 0;
+  margin: 0;
+}
+
+nav input{
+  display: none;
+}
+
+nav label{
+  display: inline-block;
+  align-self: center;
+  margin: 1.5vh;
+  font-size: 5vh;
+  color: white;
+}
+
+nav>ul{
+  display: none;
+  list-style: none;
+  padding: 3vh 0 0 0;
+  margin: 0;
+  background: #4DA5C2;
+  height: 90vh;
+}
+
+nav input:checked ~ ul{
+  display: block;
+}
+
+nav>ul>li{
+  display: block;
+  background: #4DA5C2;
+  border-top: solid 1px white;
+  transition: all 3s ease-in;
+}
+
+nav>ul>li:hover{
+  display: block;
+  background: blue;
+  border-top: solid 1px white;
+}
+
+nav>ul>li>a{
+  display: block;
+  text-align: center;
+  padding: 3vh;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+  text-decoration: none;
+}
+
+header>a>img{
+  position: absolute;
+  width: 24%;
+  max-width: 6em;
+  padding-top: 1vh;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+/* //////////////////////////////////////////////////MAIN/////////////////////////////////////////////////// */
+main{
+  margin: 0 5%;
+}
+
+section{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+  grid-gap: 2em;
+  text-align: center;
+}
+
+section>div{
+  background: #EE9061;
+  box-sizing: border-box;
+  border: 0.3em solid #EE9061;
+}
+
+/* section>div p{
+  font-size: 5em;
+  color: white;
+  padding: 0.9em 0;
+  margin: 0;
+} */
+
+section>div p{
+  color: black;
+  background: white;
+  padding: 0.7em;
+  width: 80%;
+  margin: 0 auto;
+  display: none;
+
+}
+
+h1{
+  padding-top: 3em;
+  color: black;
+}
+
+h2{
+  color: white;
+  width: 100%;
+}
+
+section img{
+  width: 100%;
+  height: 13em;
+  object-fit: cover;
+}
+
+#griekenland:checked ~ section>div p{
+  display: block;
+}

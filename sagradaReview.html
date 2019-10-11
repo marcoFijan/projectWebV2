@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="resources/images/logo.png" alt="logo"></a>
+      <!-- NAVIGATION BAR -->
+      <nav>
+        <!-- HAMBURGER MENU -->
+        <label for="hamburger">&#9776;</label>
+        <input type="checkbox" id="hamburger"/>
+        <!-- MENU ITEMS -->
+        <ul>
+          <li><a href="indexSignIn.html">Home</a></li>
+          <li><a href="bezochtLanden.html">Bezochte landen</a></li>
+          <li><a href="favorite.html">Mijn favorieten</a></li>
+          <li><a href="explain.html">Uitleg</a></li>
+          <li><a href="index.html">Uitloggen</a></li>
+        </ul>
+      </nav>
+  </header>
+  <main>
+    <div class="image sagradaImage"></div>
+    <h4>Sagrada Familia: Review geven</h4>
+    <section class="center">
+      <h1>Ik geef Sagrada Familia...</h1>
+      <input class="number" type="number" min="0" step="1"/>
+	    <h1>Vertel ons kort waarom je Sagrada Familia deze beoordeling geeft:</h1>
+      <input type="text">
+      <h1 class="center">Wat waren de positieve punten?</h1>
+      <input type="text">
+      <input type="text">
+      <input type="text">
+      <input type="text">
+      <input type="text">
+      <input type="text">
+      <input type="text">
+      <h1 class="center">Wat waren de negatieve punten?</h1>
+      <input type="text">
+      <input type="text">
+      <input type="text">
+      <input type="text">
+      <input type="text">
+      <input type="text">
+      <input type="text">
+    </section>
+    <div class="seperator"></div>
+    <input type="checkbox" id="favorite" class="favoriteButton">
+    <label for="favorite" class="favoriteCheckbox">Voeg toe aan favorieten</label>
+    <div class="button"><a href="javascript:history.back()">Opslaan</a></div>
+  </main>
+  <footer>
+    <p>Copyright: Marco Fijan</p>
+  </footer>
+</body>
+</html>

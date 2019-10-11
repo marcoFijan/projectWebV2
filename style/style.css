@@ -1,0 +1,797 @@
+:root {
+	/*COLORS*/
+  --bgColor: #f7f7f7;
+	--headerColor: #003580;
+	--accentColor: #dd9536;
+  --buttonColor: #0077cc;
+}
+
+body, main, h1, h2{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  /* Image bron: http://wallpapersworldbd.blogspot.com/2013/09/gift-of-nature-sea-beach-natural.html */
+  background-image: url("../resources/images/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+h1{
+  padding-top: 1.5em;
+  padding-bottom: 0.5em;
+  color: var(--headerColor);
+  font-size: 1.3em;
+}
+
+h2{
+  color: white;
+  width: 100%;
+  font-size: 1.1em;
+}
+
+form>h2{
+  color: var(--headerColor);
+}
+
+h4{
+  margin: 0;
+  font-size: 1.4em;
+  text-align: center;
+  background: var(--headerColor);
+  color: white;
+  width: 111%;
+  margin-left: -5.5%;
+  padding: 0.3em 0;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+mark{
+  color: var(--buttonColor);
+  background: white;
+  cursor: pointer;
+}
+
+mark:hover{
+  color: var(--headerColor);
+  transition: color .3s;
+}
+/* //////////////////////////////////////////////////HEADER/////////////////////////////////////////////////// */
+header{
+  width: 100%;
+  height: 4em;
+  background: var(--headerColor);
+  color: white;
+  position: fixed;
+  z-index: 2;
+}
+
+nav{
+  padding: 0;
+  margin: 0;
+}
+
+nav input{
+  display: none;
+}
+
+nav label{
+  display: inline-block;
+  align-self: center;
+  margin: .3em;
+  font-size: 2em;
+  color: white;
+}
+
+nav>ul{
+  display: none;
+  list-style: none;
+  padding: 3vh 0 0 0;
+  margin: 0;
+  background: var(--headerColor);
+  height: 90vh;
+}
+
+nav input:checked ~ ul{
+  display: block;
+}
+
+nav>ul>li{
+  display: block;
+  background: var(--headerColor);
+  border-top: solid 1px white;
+}
+
+nav>ul>li>a{
+  display: block;
+  text-align: center;
+  padding: 3vh;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+  text-decoration: none;
+  transition: color .5s ease-in;
+}
+
+nav>ul>li>a:hover{
+  transition: color .3s ease-in;
+  transition: border .3s ease-in;
+  color: var(--accentColor);
+  box-sizing: border-box;
+  border-bottom: .4em solid var(--accentColor);
+}
+
+header>a>img{
+  position: absolute;
+  width: 24%;
+  max-width: 5em;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  border: 0.3em solid var(--headerColor);
+}
+
+/* //////////////////////////////////////////////////MAIN/////////////////////////////////////////////////// */
+main{
+  padding: 3.5em 5% 0 5%;
+  background: var(--bgColor);
+  min-height: 80vh;
+}
+
+section{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
+  grid-gap: 2.4em;
+}
+
+section>div{
+  background: var(--accentColor);
+  box-sizing: border-box;
+  border: 0.1em solid var(--accentColor);
+  text-align: center;
+  border-radius: 0.3em;
+}
+
+section>div p{
+  font-size: 5em;
+  color: white;
+  padding: 0.7em 0;
+  margin: 0;
+}
+
+
+
+/* section>div p{
+  color: black;
+  background: white;
+  padding: 0.7em;
+  width: 80%;
+  margin: 0 auto;
+  display: none;
+} */
+
+section img{
+  width: 100%;
+  height: 13em;
+  object-fit: cover;
+  border-radius: 0.3em 0.3em 0 0;
+}
+
+.myLists>div:last-child{
+  /* display: none; */
+}
+
+.emptyState{
+  width: 20%;
+  height: 20%;
+  margin: 3em 40%;
+  opacity: .4;
+}
+
+article{
+  margin-top: 2em;
+  background: white;
+  border: 0.1em solid var(--accentColor);
+  border-radius: 0.3em;
+  padding: 0 1em 1em 1em;
+}
+
+.info{
+  margin: 2em 10% 0 10%;
+  padding: 0 3em 3em 3em;
+  display: none;
+}
+
+.infoMobile{
+  margin: 2em 0%;
+  display: block;
+  padding: 0 1.3em 1.3em 1.3em;
+}
+
+.info ol{
+  width: 100%;
+  margin: 0;
+  display: block;
+}
+
+/* //////////////////////////////////////////////////INLOGGEN/////////////////////////////////////////////////// */
+.inloggen{
+  padding: 1em 1em;
+  box-sizing: border-box;
+  min-height: 40vh;
+  margin: 10vh 5%;
+}
+
+.inloggen form{
+  background: white;
+}
+
+.inloggen h1{
+  padding: 1em 0;
+}
+
+.inloggen h2{
+  padding: .7em 0;
+}
+
+.inloggen input{
+  width: 100%;
+}
+
+/* //////////////////////////////////////////////////POP-UP/////////////////////////////////////////////////// */
+.hider{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.7);
+  margin: 0;
+  z-index: 3;
+  position: fixed;
+}
+
+.popup{
+  display: block;
+  z-index: 4;
+  width: 80%;
+  height: 76vh;
+  margin: 12vh 10%;
+  position: fixed;
+  text-align: center;
+  border: .2em solid var(--accentColor);
+  background: white;
+  box-sizing: border-box;
+  color: black;
+  border-radius: 0.3em;
+  padding: 1em;
+
+}
+
+.popup>h3{
+  padding: 1em 0;
+  border-bottom: .1em solid var(--accentColor);
+  width: 80%;
+  margin: 0 auto;
+}
+
+.popup>h3>a{
+  width: 100%;
+  color: black;
+  padding: 1em 0;
+}
+
+.popup>h1{
+  color: var(--headerColor);
+  padding: 1em;
+  padding-bottom: 20%
+}
+
+/* //////////////////////////////////////////////////IMAGES/////////////////////////////////////////////////// */
+.image, .akropolisImage, .antwerpenImage{
+  width: 111%;
+  height: 11em;
+  padding: 0;
+  margin-left: -5.5%;
+  background-image: url("../resources/images/griekenland.jpg");
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+  border: 0.1em solid var(--headerColor);
+}
+
+.akropolisImage{
+  /* Bron afbeelding: https://www.rhodesguide.com/media_www/images/344916741/201710/RhodesGuide_u551N6486_DSC_3278.jpg */
+  background-image: url("../resources/images/akropolis1.jpg");
+}
+
+.griekenlandImage{
+  background-image: url("../resources/images/griekenland.jpg")
+}
+
+.antwerpenImage{
+  background-image: url("../resources/images/belgie.jpg");
+}
+
+.spanjeImage{
+  background-image: url("../resources/images/spanje.jpg");
+}
+
+.sagradaImage{
+  background-image: url("../resources/images/sagrada.jpg");
+}
+
+.wrapper{
+  max-height: 14em;
+}
+
+.activeBorder{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* //////////////////////////////////////////////////LISTACTIVE/////////////////////////////////////////////////// */
+.planningItem{
+  /* border-right: 0.1em solid var(--accentColor);
+  border-bottom: 0.1em solid var(--accentColor); */
+  border: 0.1em solid var(--accentColor);
+  /* background: var(--accentColor); */
+  padding: 0.6em;
+  box-sizing: border-box;
+  grid-gap: 0;
+  background: white;
+  border-radius: 0.3em;
+}
+
+.planningItem>section{
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  margin-top: -1em;
+}
+
+/* .planningItem>section:nth-of-type(2){
+  display: inline-block;
+  margin-top: -2em;
+} */
+
+.planningItem a{
+  background: var(--buttonColor);
+  border: none;
+  color: white;
+  padding: .4em;
+  height: 2em;
+  width: 2em;
+  text-align: center;
+  align-items: center;
+  font-size: 1em;
+  margin-right: -2em;
+  margin-top: 1em;
+  border-radius: 0.3em;
+}
+
+.planningItem a:first-child{
+  font-size: 1.4em;
+  max-width: 2em;
+  max-height: 2em;
+  box-sizing: border-box;
+  margin: .73em -1.4em 0 0;
+}
+
+.icon{
+  width: auto;
+  height: 2em;
+}
+
+.planningItem a:nth-of-type(4){
+  background: green;
+  padding: .8em 1.8em;
+  border-radius: 0.3em;
+  height: 2.8em;
+  width: 8em;
+  box-sizing: border-box;
+}
+
+.planningItemSpanje{
+  grid-template-columns: repeat(auto-fill, minmax(13em, 1fr));
+}
+
+.planningItemSpanje a{
+  width: 7em;
+}
+
+.sagInfo h2{
+  color: var(--headerColor);
+}
+
+.information{
+  width: 10em;
+}
+/* .planningItem a:nth-of-type(5){
+  position: absolute;
+  margin-left: 0;
+
+  background: red;
+  width: 2em;
+} */
+
+/* .planningItem h3:first-child{
+  background: green;
+  color: white;
+  padding: 0.2em 0.3em 0.2em 0.2em;
+  font-size: 1.3em;
+  height: 1.2em;
+  margin-right: -1.5em;
+} */
+
+.planningItem h3{
+  color: black;
+  font-size: 1em;
+}
+
+.seperator{
+  margin-top: 3em;
+  width: 100%;
+  height: 1px;
+  background: var(--headerColor);
+}
+
+.pc{
+  display: none;
+}
+
+main>section:last-child{
+  padding-bottom: 4em;
+}
+
+.button{
+  margin: 3em 0 0 0;
+  text-align: center;
+  padding-bottom: 3em;
+}
+
+.button>a:hover, .deleteButton:hover{
+  transition: all 1s ease-in;
+  background: var(--headerColor);
+  cursor: pointer;
+}
+
+.button>a, .deleteButton{
+  /* padding: 0 2em; */
+  background: var(--buttonColor);
+  padding: 1em 2em;
+  border-radius: 0.3em;
+  transition: all 1s ease-in;
+  color: white;
+}
+
+.cancelButton{
+  margin: 2em 0 1em 0;
+  /* padding-top: -2em; */
+}
+
+.cancelButton>a{
+  background: var(--accentColor);
+}
+
+/* article{
+  display: grid;
+  grid-column: 20em;
+} */
+
+.akropolisMapSec{
+  display: block;
+}
+
+.akropolisMap{
+  margin-top: 1em;
+  width: 100%;
+  height: auto;
+}
+
+ol{
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+  grid-gap: 1em;
+  grid-column:
+}
+
+ol>li{
+  max-width: 80%;
+}
+
+.gMaps{
+  width: 111%;
+  margin-left: -5.5%;
+  height: 75vh;
+  border: none;
+}
+
+.searchBox, .addItemBox{
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 3em;
+  margin: 2em 10%;
+  border: 0.1em solid var(--accentColor);
+  border-radius: 0.3em;
+}
+
+.searchBar, .addItemBar{
+  padding-left: 1em;
+  width: 90%;
+  height: 95%;
+  border: none;
+  border-radius: 0.3em 0 0 0.3em;
+}
+
+.searchButton, .addItemButton{
+  height: 100%;
+  text-align: center;
+  width: 5em;
+  margin-left: auto;
+  padding-top: .8em;
+  box-sizing: border-box;
+  background: var(--buttonColor);
+  border-radius: 0 0.2em 0.2em 0;
+  cursor: pointer;
+}
+
+/* //////////////////////////////////////////////////FORMS/////////////////////////////////////////////////// */
+form{
+  width: 100%;
+  background: var(--bgColor);
+}
+
+form h1{
+  margin-bottom: 0.5em;
+}
+
+form h2{
+  color: var(--headerColor);
+  padding-bottom: 0.3em;
+  width: 100%;
+}
+
+form section{
+  background: white;
+  margin: 1em 0;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+form input{
+  border: none;
+  border-bottom: 0.05em solid var(--headerColor);
+  color: grey;
+}
+
+form input:focus{
+  border-bottom: 0.1em solid var(--accentColor);
+  color: black;
+}
+
+/* //////////////////////////////////////////////////MAKE LIST/////////////////////////////////////////////////// */
+.makeList{
+  display: block;
+}
+
+.makeList h2{
+  color: var(--headerColor);
+}
+
+.makeList ul{
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
+  grid-gap: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+.makeList li{
+  background: white;
+  border: 0.1em solid var(--accentColor);
+  border-radius: .3em;
+  padding: 1em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  align-items: center;
+}
+
+.makeList>ul>li>input{
+  width: 80%;
+  margin: 3em 10%;
+  height: 2em;
+}
+
+.addItemButton{
+  color: white;
+}
+
+.deleteButton{
+  padding: .3em;
+}
+
+.stars{
+  width: 70%;
+  height: 10em;
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 15%;
+}
+
+.stars>div{
+  width: 2em;
+  height: 2em;
+  background: var(--accentColor);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.center{
+  width: 80%;
+  margin: 0 10%;
+  text-align: center;
+  display: block
+}
+
+.number{
+  font-size: 3em;
+  width: 4em;
+  margin: 0 35%;
+  height: 5em;
+  text-align: center;
+  background: var(--bgColor);
+}
+
+.center input{
+  border: none;
+  border-bottom: 0.05em solid var(--headerColor);
+  height: 2em;
+  color: grey;
+  width: 80%;
+  margin: .5em;
+}
+
+.center input:focus{
+  border-bottom: 0.1em solid var(--accentColor);
+  color: black;
+}
+
+.favoriteButton{
+  display: none;
+}
+
+.favoriteButton:checked ~ .favoriteCheckbox{
+  background: orange;
+}
+
+.favoriteCheckbox{
+  transition: all .3s ease-in;
+  background: var(--buttonColor);
+  cursor: pointer;
+  color: white;
+  padding: 1em;
+  border-radius: .3em;
+  display: block;
+  width: 12em;
+  margin: 2em auto 0 auto;
+  text-align: center;
+}
+
+
+/* //////////////////////////////////////////////////FOOTER/////////////////////////////////////////////////// */
+footer{
+  width: 100%;
+  background: var(--headerColor);
+  color: white;
+  text-align: center;
+  padding: .3em 0;
+  margin: 0;
+}
+
+footer>p{
+  font-size: .7em;
+}
+
+/* //////////////////////////////////////////////////PC-Screen/////////////////////////////////////////////////// */
+@media only screen and (min-width: 1000px) {
+  nav>ul{
+    display: inline-block;
+    height: 0;
+    margin-left: 16%;
+    padding-top: 0;
+  }
+
+  nav>ul>li{
+    display: inline-block;
+    border: 0px;
+  }
+
+  nav>ul>li>a{
+    width: auto;
+    /* padding: 0.3em 1em; */
+    padding: 1.35em;
+    height: 4em;
+  }
+
+  nav>ul>li:first-child{
+    opacity: 0;
+  }
+
+  nav label{
+    display: none;
+  }
+
+  header>a>img{
+    display: inline-block;
+    margin: 0;
+    margin-left: 15%;
+  }
+
+  main{
+    padding: 4em 5% 0 5%;
+    margin: 0 15%;
+  }
+
+  .inloggen{
+    margin: 10vh 20%;
+    padding: 1em 3em;
+  }
+
+  .image, .akropolisImage, h4, .antwerpenImage{
+    /* width: 142.9%;
+    margin-left: -21.495%; */
+    width: 116.5%;
+    margin: 0 -8.25% ;
+  }
+
+  .image, .akropolisImage, .antwerpenImage{
+    height: 20em;
+    height: 70vh;
+    padding: 0;
+  }
+
+  .akropolisMapSec{
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .info, .pc, .myLists>div:last-child{
+    display: block;
+  }
+
+  .infoMobile{
+    display: none;
+  }
+
+  .popup{
+    height: 70vh;
+    width: 30%;
+    margin: 15vh 35%;
+  }
+
+  .makeList li{
+    flex-wrap: nowrap;
+  }
+
+  .deleteButton{
+    padding: 1em 2em;
+  }
+
+  footer{
+    width: 70%;
+    margin: 0 15%;
+  }
+}

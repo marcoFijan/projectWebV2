@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="resources/images/logo.png" alt="logo"></a>
+      <!-- NAVIGATION BAR -->
+      <nav>
+        <!-- HAMBURGER MENU -->
+        <label for="hamburger">&#9776;</label>
+        <input type="checkbox" id="hamburger"/>
+        <!-- MENU ITEMS -->
+        <ul>
+          <li><a href="indexSignIn2.html">Home</a></li>
+          <li><a href="bezochtLanden.html">Bezochte landen</a></li>
+          <li><a href="favorite.html">Mijn favorieten</a></li>
+          <li><a href="explain.html">Uitleg</a></li>
+          <li><a href="index.html">Uitloggen</a></li>
+        </ul>
+      </nav>
+  </header>
+  <main>
+    <div class="antwerpenImage"></div>
+    <h4>Lijstie maken: Antwerpen</h4>
+    <section class="makeList">
+      <article>
+        <h1>Hoe werkt dit?</h1>
+        <p>Typ hier je trekpleisters en plekjes die je echt wilt bezoeken in.</p>
+        <p>Onze database gaat hard zijn best doen voor jou om je trekpleister te vinden.</p>
+        <p>Later kun je makkelijk een routeplanner of kaart opvragen van die trekpleisters.</p>
+      </article>
+      <h1>Mijn lijstie:</h1>
+      <ul>
+      </ul>
+      <form id ="addItemBox" class="addItemBox">
+        <input class="addItemBar" list="addItemDataList" type="text" placeholder="Voeg een trekpleister toe. Bijvoorbeeld: 'Eiffeltoren' ">
+        <div id="addItemButton" class="addItemButton">+</div>
+        <datalist id="addItemDataList">
+          <option value="Oude binnenstad">
+          <option value="MAS, Museum aan de Stroom">
+          <option value="Winkelen in het centrum">
+          <option value="Onze Lieve Vrouwekathedraal">
+          <option value="Museum van Hedendaagse Kunst Antwerpen">
+          <option value="Mode museum">
+          <option value="St. Andries kerk">
+          <option value="Maagdenhuis museum">
+          <option value="Rubenshuis">
+          <option value="Snijders en Rockoxhuis">
+          <option value="Stadsbrouwerij De Koninck">
+          <option value="De Koninck">
+          <option value="Schelde">
+          <option value="Rivier de Schelde">
+          <option value="Belle Epoque wijk">
+          <option value="Vreemdelingenmarkt">
+          <option value="Het Eilandje">
+          <option value="Het Zuid">
+          <option value="Zuid">
+          <option value="Eilandje">
+          <option value="Waagnatie">
+          <option value="Middelheimmuseum">
+          <option value="Chocolate Line">
+          <option value="Brouwerijtour">
+          <option value="Mercado postkantoor">
+        </datalist>
+      </form>
+    </section>
+    <div class="button"><a href="indexSignIn2.html">Opslaan</a></div>
+    <div class="button cancelButton"><a href="indexSignIn2.html">Annuleren</a></div>
+  </main>
+  <footer>
+    <p>Copyright: Marco Fijan</p>
+  </footer>
+  <script src="script/script.js"></script>
+</body>
+</html>
